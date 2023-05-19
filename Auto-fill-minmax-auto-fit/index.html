@@ -5,17 +5,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Grid template rows</title>
+    <title>Auto fill & minmax & auto fit</title>
     <style>
         .grid {
             display: grid;
             /*grid-template-columns: repeat(3, 1fr);*/
-            grid-template-columns: 1fr 2fr;
-            grid-template-rows: 1fr 1fr 2fr;
+            /*grid-template-rows: minmax(40px, auto) minmax(40px, auto) minmax(40px, auto);*/
+            /*grid-template-rows: minmax(40px, auto) minmax(40px, 100px) minmax(40px, auto);*/
+            /*grid-template-columns: repeat(auto-fill, minmax(60px, 10px));*/
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
         }
 
         .item {
-            padding: 3rem;
+            /*padding: 3rem;*/
+            padding: 0.3rem;
             background: #333333;
             color: white;
             border: #ccc 1px solid;
@@ -33,7 +36,11 @@
     <div class="item">Item 3</div>
     <div class="item">Item 4</div>
     <div class="item">Item 5</div>
-    <div class="item">Item 6</div>
+    <!--    <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi blanditiis dolores excepturi, id necessitatibus numquam quam tenetur ut. Impedit, ipsum.</div>-->
+    <div class="item">Item 7</div>
+    <div class="item">Item 8</div>
+    <div class="item">Item 9</div>
+    <div class="item">Item 10</div>
 </div>
 
 </body>
